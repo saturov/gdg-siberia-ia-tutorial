@@ -1,0 +1,11 @@
+ext {
+    applicationId = "ru.gdg_siberia.instant_app_tutorial"
+    versionCode = 100
+    versionName = "0.0.1"
+    buildToolsVersion = "25.0.3"
+    minSdkVersion = 21
+    targetSdkVersion = 26
+    compileSdkVersion = 26
+    debugVersionNameSuffix = ".debug"
+    releaseVersionNameSuffix = ""
+}

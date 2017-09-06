@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">instant-app-tutorial</string>
+
+    <string name="error_text_unexpected">Непредвиденная ошибка</string>
+</resources>
