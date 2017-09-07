@@ -12,6 +12,8 @@ import com.agna.ferro.mvp.view.activity.MvpActivityView;
 import java.util.HashSet;
 import java.util.Set;
 
+import ru.gdg_siberia.instant_app_tutorial.app.App;
+import ru.gdg_siberia.instant_app_tutorial.app.dagger.AppComponent;
 import ru.gdg_siberia.instant_app_tutorial.ui.base.proxy.ActivityResultProxy;
 import ru.gdg_siberia.instant_app_tutorial.ui.base.proxy.NewIntentProxy;
 import ru.gdg_siberia.instant_app_tutorial.ui.base.proxy.RequestPermissionProxy;
@@ -68,6 +70,10 @@ public abstract class BaseActivityView extends MvpActivityView implements Suppor
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public AppComponent getAppComponent() {
+        return ((App) getApplication()).getAppComponent();
     }
 
     public void runDelayed(Runnable runnable, int delayMs) {
