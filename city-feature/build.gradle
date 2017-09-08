@@ -1,19 +1,20 @@
 apply plugin: 'com.android.feature'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    def config = rootProject.extensions.getByName("ext")
 
-    baseFeature true
+    compileSdkVersion config["compileSdkVersion"]
+    buildToolsVersion config["buildToolsVersion"]
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode config["versionCode"]
+        versionName config["versionName"]
+
+        minSdkVersion config["minSdkVersion"]
+        targetSdkVersion config["targetSdkVersion"]
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        setProperty("archivesBaseName", "Instant App GDG Siberia-$versionName-($versionCode)")
     }
 
     compileOptions {
@@ -59,6 +60,4 @@ dependencies {
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
-    application project(':app')
 }
