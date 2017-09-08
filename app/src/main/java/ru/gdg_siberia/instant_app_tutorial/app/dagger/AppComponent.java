@@ -2,16 +2,12 @@ package ru.gdg_siberia.instant_app_tutorial.app.dagger;
 
 import android.content.Context;
 
-import com.agna.ferro.mvp.component.scope.PerApplication;
-
 import dagger.Component;
-import ru.gdg_siberia.instant_app_tutorial.interactor.scheduler.SchedulerModule;
-import ru.gdg_siberia.instant_app_tutorial.interactor.scheduler.SchedulersProvider;
+import ru.gdg_siberia.city_feature.app.dagger.BaseAppComponent;
+import ru.gdg_siberia.city_feature.interactor.scheduler.SchedulersProvider;
 
-@PerApplication
-@Component(modules = {
-        AppModule.class,
-        SchedulerModule.class})
+@PerFullApplication
+@Component(dependencies = BaseAppComponent.class)
 public interface AppComponent {
     Context context();
 

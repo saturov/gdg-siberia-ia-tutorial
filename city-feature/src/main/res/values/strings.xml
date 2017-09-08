@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Instant App</string>
+
+    <string name="error_text_unexpected">Непредвиденная ошибка</string>
 </resources>

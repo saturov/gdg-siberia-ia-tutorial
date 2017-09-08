@@ -5,9 +5,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import ru.gdg_siberia.instant_app_tutorial.R;
-import ru.gdg_siberia.instant_app_tutorial.domain.City;
-import ru.gdg_siberia.instant_app_tutorial.ui.base.recycler.BindableViewHolder;
-import ru.gdg_siberia.instant_app_tutorial.ui.base.recycler.RecyclerAdapter;
+import ru.gdg_siberia.city_feature.domain.City;
+import ru.gdg_siberia.city_feature.ui.base.recycler.BindableViewHolder;
+import ru.gdg_siberia.city_feature.ui.base.recycler.RecyclerAdapter;
 
 public class CitiesAdapter extends RecyclerAdapter<City> {
 

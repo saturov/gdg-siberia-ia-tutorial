@@ -15,9 +15,10 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import ru.gdg_siberia.city_feature.domain.City;
+import ru.gdg_siberia.city_feature.ui.base.activity.BaseActivityView;
 import ru.gdg_siberia.instant_app_tutorial.R;
-import ru.gdg_siberia.instant_app_tutorial.domain.City;
-import ru.gdg_siberia.instant_app_tutorial.ui.base.activity.BaseActivityView;
+import ru.gdg_siberia.instant_app_tutorial.app.App;
 
 /**
  * Экран со списком городов
@@ -55,7 +56,7 @@ public class CitiesActivityView extends BaseActivityView {
     protected ScreenComponent<CitiesActivityView> createScreenComponent() {
         return DaggerCitiesComponent.builder()
                 .activityModule(getActivityModule())
-                .appComponent(getAppComponent())
+                .appComponent(App.getAppComponent(this))
                 .build();
     }
 

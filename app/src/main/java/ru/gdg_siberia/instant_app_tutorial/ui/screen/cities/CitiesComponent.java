@@ -5,7 +5,7 @@ import com.agna.ferro.mvp.component.scope.PerScreen;
 
 import dagger.Component;
 import ru.gdg_siberia.instant_app_tutorial.app.dagger.AppComponent;
-import ru.gdg_siberia.instant_app_tutorial.ui.common.dagger.ActivityViewModule;
+import ru.gdg_siberia.city_feature.ui.common.dagger.ActivityViewModule;
 
 @PerScreen
 @Component(dependencies = AppComponent.class, modules = {

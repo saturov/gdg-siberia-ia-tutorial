@@ -16,6 +16,11 @@ android {
 
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     baseFeature true
 
     buildTypes {
@@ -28,10 +33,27 @@ android {
 }
 
 dependencies {
+    def appcompatVersion = '26.0.2'
+    def daggerVersion = '2.11'
+    def rxJava2Version = '2.1.3'
+    def rxAndroid2Version = '2.0.1'
 
     application project(":app")
 
-    api 'com.android.support:appcompat-v7:26.0.2'
+    annotationProcessor "com.google.dagger:dagger-compiler:${daggerVersion}"
+
+    api "com.android.support:appcompat-v7:${appcompatVersion}"
+    api "com.android.support:design:${appcompatVersion}"
+
+    api 'com.agna.ferro:ferro-core:1.1.2'
+    api 'com.agna.ferro:ferro-mvp:1.1.2'
+    api 'com.agna.ferro:ferro-rx:2.0.0'
+
+    api "io.reactivex.rxjava2:rxjava:${rxJava2Version}"
+    api "io.reactivex.rxjava2:rxandroid:${rxAndroid2Version}"
+
+    api "com.google.dagger:dagger:${daggerVersion}"
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     testImplementation 'junit:junit:4.12'
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {

@@ -5,10 +5,10 @@ import com.agna.ferro.mvp.component.scope.PerScreen;
 import javax.inject.Inject;
 
 import io.reactivex.disposables.Disposable;
-import ru.gdg_siberia.instant_app_tutorial.interactor.city.CityRepository;
-import ru.gdg_siberia.instant_app_tutorial.interactor.scheduler.SchedulersProvider;
-import ru.gdg_siberia.instant_app_tutorial.ui.base.activity.BasePresenter;
-import ru.gdg_siberia.instant_app_tutorial.ui.common.error.ErrorHandler;
+import ru.gdg_siberia.city_feature.interactor.city.CityRepository;
+import ru.gdg_siberia.city_feature.interactor.scheduler.SchedulersProvider;
+import ru.gdg_siberia.city_feature.ui.base.activity.BasePresenter;
+import ru.gdg_siberia.city_feature.ui.common.error.ErrorHandler;
 import ru.gdg_siberia.instant_app_tutorial.ui.common.navigation.Navigator;
 
 /**

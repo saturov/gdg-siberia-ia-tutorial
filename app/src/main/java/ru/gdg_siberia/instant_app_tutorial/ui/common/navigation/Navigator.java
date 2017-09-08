@@ -7,8 +7,8 @@ import com.agna.ferro.mvp.component.scope.PerScreen;
 
 import javax.inject.Inject;
 
-import ru.gdg_siberia.instant_app_tutorial.ui.base.proxy.ActivityResultProxy;
-import ru.gdg_siberia.instant_app_tutorial.ui.screen.city.CityActivityView;
+import ru.gdg_siberia.city_feature.ui.base.proxy.ActivityResultProxy;
+import ru.gdg_siberia.city_feature.ui.screen.city.CityActivityView;
 
 @PerScreen
 public class Navigator implements ActivityResultProxy {
