@@ -56,7 +56,17 @@ public class CityActivityView extends BaseActivityView {
 
     @Override
     protected ScreenComponent<CityActivityView> createScreenComponent() {
-        String cityUrl = getIntent().getStringExtra(EXTRA_CITY_URL);
+        String cityUrl = null;
+
+        //запуск через Instant App
+        if (getIntent().getData() != null) {
+            cityUrl = getIntent().getData().getLastPathSegment();
+        }
+
+        if (cityUrl == null) {
+            cityUrl = getIntent().getStringExtra(EXTRA_CITY_URL);
+        }
+
         if (cityUrl == null) {
             cityUrl = "";
         }
