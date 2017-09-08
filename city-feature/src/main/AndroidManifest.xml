@@ -11,6 +11,7 @@
 
         <activity
             android:name="ru.gdg_siberia.city_feature.ui.screen.city.CityActivityView"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBarTransparency" />
 
     </application>

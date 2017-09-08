@@ -13,7 +13,9 @@
         android:theme="@style/AppTheme"
         tools:replace="android:name">
 
-        <activity android:name=".ui.screen.cities.CitiesActivityView">
+        <activity
+            android:name=".ui.screen.cities.CitiesActivityView"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
