@@ -11,9 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity" />
-
-        <activity android:name=".ui.screen.cities.CitiesActivityView">
+        <activity
+            android:name=".ui.screen.cities.CitiesActivityView"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -22,6 +22,7 @@
 
         <activity
             android:name=".ui.screen.city.CityActivityView"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBarTransparency" />
 
     </application>
