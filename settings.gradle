@@ -1,1 +1,1 @@
-include ':app', ':city-feature'
+include ':app', ':city-feature', ':instant-app'
