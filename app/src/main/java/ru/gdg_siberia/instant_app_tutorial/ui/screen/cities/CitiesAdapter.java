@@ -12,7 +12,7 @@ import ru.gdg_siberia.instant_app_tutorial.ui.base.recycler.RecyclerAdapter;
 public class CitiesAdapter extends RecyclerAdapter<City> {
 
     interface OnClickListener {
-        void onCityClick();
+        void onCityClick(String cityUrl);
     }
 
     private OnClickListener callback;
@@ -37,16 +37,23 @@ public class CitiesAdapter extends RecyclerAdapter<City> {
 
     private class CityViewHolder extends BindableViewHolder<City> {
 
+        private View container;
         private TextView cityNameTv;
 
-        CityViewHolder(View itemView) {
-            super(itemView);
-            this.cityNameTv = itemView.findViewById(R.id.city_name_tv);
+        CityViewHolder(View container) {
+            super(container);
+            this.container = container;
+            this.cityNameTv = container.findViewById(R.id.city_name_tv);
         }
 
         @Override
         public void bind(City bindItem) {
             this.cityNameTv.setText(bindItem.getName());
+            this.container.setOnClickListener(view -> {
+                if (callback != null) {
+                    callback.onCityClick(bindItem.getUrl());
+                }
+            });
         }
     }
 }

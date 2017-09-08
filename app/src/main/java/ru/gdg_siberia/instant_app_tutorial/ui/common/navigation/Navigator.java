@@ -8,6 +8,7 @@ import com.agna.ferro.mvp.component.scope.PerScreen;
 import javax.inject.Inject;
 
 import ru.gdg_siberia.instant_app_tutorial.ui.base.proxy.ActivityResultProxy;
+import ru.gdg_siberia.instant_app_tutorial.ui.screen.city.CityActivityView;
 
 @PerScreen
 public class Navigator implements ActivityResultProxy {
@@ -25,5 +26,12 @@ public class Navigator implements ActivityResultProxy {
 
     public void finishCurrent() {
         activityProvider.get().finish();
+    }
+
+    /**
+     * Переход на экран конкретного города
+     */
+    public void openCityScreen(String url) {
+        CityActivityView.start(activityProvider.get(), url);
     }
 }

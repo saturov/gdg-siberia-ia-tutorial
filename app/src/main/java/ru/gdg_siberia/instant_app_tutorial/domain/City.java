@@ -4,10 +4,13 @@ public class City {
 
     private String name;
     private String description;
+    private String url;
     private int pictureId;
 
-    public City(String name, int pictureId) {
+    public City(String name, String url, String description, int pictureId) {
         this.name = name;
+        this.url = url;
+        this.description = description;
         this.pictureId = pictureId;
     }
 
@@ -35,12 +38,22 @@ public class City {
         this.pictureId = pictureId;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     @Override
     public String toString() {
         return "City{" +
                 "name='" + name + '\'' +
                 ", description='" + description + '\'' +
+                ", url='" + url + '\'' +
                 ", pictureId=" + pictureId +
                 '}';
     }
+
 }

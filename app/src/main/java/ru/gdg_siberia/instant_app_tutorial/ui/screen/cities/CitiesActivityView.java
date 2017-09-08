@@ -3,9 +3,11 @@ package ru.gdg_siberia.instant_app_tutorial.ui.screen.cities;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 
 import com.agna.ferro.mvp.component.ScreenComponent;
 
@@ -69,11 +71,25 @@ public class CitiesActivityView extends BaseActivityView {
     }
 
     private void initViews() {
+        initToolbar();
         this.citiesRv = findViewById(R.id.cities_rv);
         this.citiesRv.setLayoutManager(new LinearLayoutManager(this));
         this.citiesRv.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         this.adapter = new CitiesAdapter(this);
+        this.adapter.setOnClickListener(url -> presenter.openCityScreen(url));
         this.citiesRv.setAdapter(adapter);
+    }
+
+    private void initToolbar() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+            ActionBar actionBar = getSupportActionBar();
+            if (actionBar != null) {
+                actionBar.setDisplayHomeAsUpEnabled(false);
+            }
+        }
+
     }
 
 }

@@ -44,4 +44,8 @@ public class CitiesPresenter extends BasePresenter<CitiesActivityView> {
                 getView().showData(cities));
     }
 
+    public void openCityScreen(String cityUrl) {
+        navigator.openCityScreen(cityUrl);
+    }
+
 }
