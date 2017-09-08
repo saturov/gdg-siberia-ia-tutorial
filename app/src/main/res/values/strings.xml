@@ -1,5 +1,27 @@
 <resources>
-    <string name="app_name">instant-app-tutorial</string>
+    <string name="app_name">Not An Instant App</string>
 
     <string name="error_text_unexpected">Непредвиденная ошибка</string>
+
+    <string-array name="cities">
+        <item>Ekaterinburg</item>
+        <item>Kaliningrad</item>
+        <item>Kazan</item>
+        <item>Krasnoyarsk</item>
+        <item>Makhachkala</item>
+        <item>Moscow</item>
+        <item>Nizhny Novgorod</item>
+        <item>Novosibirsk</item>
+        <item>Omsk</item>
+        <item>Penza</item>
+        <item>Perm</item>
+        <item>Petrozavodsk</item>
+        <item>Rostov</item>
+        <item>Samara</item>
+        <item>St.Petersburg</item>
+        <item>Ufa</item>
+        <item>Ulan-Ude</item>
+        <item>Vladivostok</item>
+        <item>Voronezh</item>
+    </string-array>
 </resources>
